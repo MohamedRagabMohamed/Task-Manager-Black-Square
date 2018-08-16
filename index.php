@@ -46,7 +46,9 @@ $updateStatusString = "http://localhost/demo/databaseCon.php?updateStatus=";
 $i = 1;
 foreach ($Tasks as $row) {
 ?>   
-            <tr draggable="true" ondragstart="saveNode(this,<?php echo $row['ID']; ?>)" ondragend="release(this)" >
+            <tr draggable="true" ondragstart="saveNode(this,<?php
+    echo $row['ID'];
+?>)" ondragend="release(this)" >
               <?php
     if (strtolower($row['Group']) == "a") {
 ?>
@@ -167,7 +169,9 @@ foreach ($Tasks as $row) {
 $i = 1;
 foreach ($Tasks as $row) {
 ?>   
-          <tr style="text-align: left;" draggable="true" ondragstart="saveNode(this , <?php echo $row['ID'] ;?>)" ondragend="release(this)" >
+          <tr style="text-align: left;" draggable="true" ondragstart="saveNode(this , <?php
+    echo $row['ID'];
+?>)" ondragend="release(this)" >
             <?php
     if (strtolower($row['Group']) == "b") {
 ?>
