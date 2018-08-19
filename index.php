@@ -3,7 +3,7 @@
   <?php
 require_once('databaseCon.php');
 $Tasks              = $_SESSION['results']; //data retrived from database
-$updateStatusString = "http://localhost/demo/databaseCon.php?updateStatus=";
+$updateStatusString = "databaseCon.php?updateStatus=";
 ?>
  <head>
     <meta charset="UTF-8">
@@ -398,7 +398,7 @@ foreach ($Tasks as $row) {
       // delete buton click function 
       function  MyDeleteFunction() {
            var id = document.getElementById("TaskId").value;
-           var query = "http://localhost/demo/databaseCon.php?del=" + id;
+           var query = "databaseCon.php?del=" + id;
            document.location.href=query ;
       }
 
@@ -416,7 +416,7 @@ foreach ($Tasks as $row) {
           //alert(e.target.type);
           var id = $(e.target).next('input')[0].value;
           var newTitle = e.target.value;
-           var query = "http://localhost/demo/databaseCon.php?updateTitle=" + id +'$'+newTitle;
+           var query = "databaseCon.php?updateTitle=" + id +'$'+newTitle;
            //alert(query);
             document.location.href=query ;
         }
@@ -426,11 +426,12 @@ foreach ($Tasks as $row) {
         if (e.target.type == "date" &&(e.keyCode === 13)) {
           var id = $(e.target).next('input')[0].value;
           var newDate = e.target.value;
-           var query = "http://localhost/demo/databaseCon.php?updateDate=" + id +'$'+ newDate;
+           var query = "databaseCon.php?updateDate=" + id +'$'+ newDate;
            //alert(query);
            document.location.href=query ;
         }
       });
+
       let saveNodeElement;
       let parent;
       let allowDropElement = false;
@@ -450,7 +451,7 @@ foreach ($Tasks as $row) {
         if (allowDropElement) {
             parent.appendChild(saveNodeElement);
             //console.log(parent.id+ "    aaaaa");
-            var query = "http://localhost/demo/databaseCon.php?updateGroup=" + taskID +'$'+ parent.id;
+            var query = "databaseCon.php?updateGroup=" + taskID +'$'+ parent.id;
            //alert(query);
            document.location.href=query ;
 
