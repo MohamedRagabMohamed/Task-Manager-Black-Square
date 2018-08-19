@@ -37,7 +37,7 @@ $updateStatusString = "http://localhost/demo/databaseCon.php?updateStatus=";
             </th>
             <th>
             </th>
-            <th>Date
+            <th>Date 
             </th>
             <th>Status
             </th>

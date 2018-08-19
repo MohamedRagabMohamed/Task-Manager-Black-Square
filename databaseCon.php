@@ -6,8 +6,10 @@ $username   = "root";
 $password   = "";
 $dbname     = "black_square";
 
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
+
 
 // create new task task
 if (isset($_POST['save'])) {
@@ -23,12 +25,15 @@ if (isset($_POST['save'])) {
     header('location: index.php');
 }
 
+
 // delete task
 if (isset($_GET['del'])) {
     $id = $_GET['del'];
     mysqli_query($conn, "DELETE FROM task WHERE ID=$id");
     header('location: index.php');
 }
+
+
 
 // update  task title
 if (isset($_GET['updateTitle'])) {
@@ -38,6 +43,7 @@ if (isset($_GET['updateTitle'])) {
     header('location: index.php');
 }
 
+
 // update  task date
 if (isset($_GET['updateDate'])) {
     $data      = $_GET['updateDate']; // get all data (id and new date)
@@ -45,6 +51,8 @@ if (isset($_GET['updateDate'])) {
     mysqli_query($conn, "UPDATE `task` SET `Date`='$splitData[1]' WHERE ID = '$splitData[0]'");
     header('location: index.php');
 }
+
+
 // update  task status
 if (isset($_GET['updateStatus'])) {
     $data      = $_GET['updateStatus']; // get all data (id and new status)
@@ -53,6 +61,7 @@ if (isset($_GET['updateStatus'])) {
     header('location: index.php');
 }
 
+
 // update  task group
 if (isset($_GET['updateGroup'])) {
     $data      = $_GET['updateGroup']; // get all data (id and new title)
@@ -60,6 +69,7 @@ if (isset($_GET['updateGroup'])) {
     mysqli_query($conn, "UPDATE `task` SET `Group`='$splitData[1]' WHERE ID = '$splitData[0]'");
     header('location: index.php');
 }
+
 
 // retrive data    
 $results             = mysqli_query($conn, " SELECT  * FROM task");
