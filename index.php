@@ -13,9 +13,6 @@ $updateStatusString = "databaseCon.php?updateStatus=";
     </title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script>
-      
-    </script>
   </head>
   <body>
     <div class="grid">
@@ -376,8 +373,6 @@ foreach ($Tasks as $row) {
     </script> 
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js">
     </script> 
-    <script src="https://getbootstrap.com/dist/js/bootstrap.min.js">
-    </script>
     
     <script>
       // table body sort
@@ -458,9 +453,9 @@ foreach ($Tasks as $row) {
         }
       }
     </script>
-    <script src="js/bootstrap.min.js">
+    <script src="js/bootstrap.js">
     </script>
-    <script src="js/jquery-3.3.1.js">
+    <script src="js/jquery-3.3.1.min.js">
     </script>
   </body>
 </html>
